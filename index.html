@@ -209,6 +209,7 @@
             text-transform: uppercase;
             text-shadow: 0 0 20px var(--glow);
             animation: glow 2s ease-in-out infinite alternate;
+            letter-spacing: 1px;
         }
 
         @keyframes glow {
@@ -1907,6 +1908,43 @@
             color: var(--text-primary);
         }
 
+        /* Logo Styling */
+        .logg {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 1rem;
+            overflow: visible;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .logg a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            visibility: visible;
+        }
+
+        .logg img { 
+            height: 80px;
+            width: 80px;
+            object-fit: cover;
+            border-radius: 50%;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+            flex-shrink: 0;
+            overflow: visible;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .logg img:hover {
+            transform: scale(1.1);
+            filter: brightness(1.1) contrast(1.1);
+            box-shadow: 0 0 40px rgba(45, 212, 191, 1);
+        }
+
         /* Mobile Menu */
         .mobile-menu-btn {
             display: none;
@@ -1954,6 +1992,16 @@
                 display: block;
             }
 
+            .logo {
+                font-size: 1.1rem;
+                letter-spacing: 0.5px;
+            }
+
+            .logg img {
+                height: 48px;
+                width: 48px;
+            }
+
             .nav-links {
                 display: none;
                 position: absolute;
@@ -1982,7 +2030,7 @@
 
             .slider-item {
                 width: 300px;
-                height: 450px;
+                height: 530px;
                 padding: 2rem;
             }
 
@@ -1995,7 +2043,7 @@
             }
 
             .slider-title {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
             }
 
             .slider-arrow {
@@ -2027,6 +2075,16 @@
         }
 
         @media (max-width: 480px) {
+            .logo {
+                font-size: 0.95rem;
+                letter-spacing: 0.3px;
+            }
+
+            .logg img {
+                height: 40px;
+                width: 40px;
+            }
+
             .hero-title {
                 font-size: 2rem;
             }
@@ -2072,6 +2130,9 @@
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
+            <div class="logg">
+                <a href="#home"><img src="images/logo.png" alt="Makryon-Tech Logo"></a>
+            </div>
             <div class="logo">Makryon-TECH</div>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home" class="active">Home</a></li>
@@ -2113,9 +2174,9 @@
                     </a>
                 </div>
                 <div class="social-links">
-                    <a href="#" class="social-link" title="GitHub" target="_blank"><i class='bx bxl-github'></i></a>
+                    <a href="mailto:makambajulius2020@gmail.com" class="social-link" title="GitHub" target="_blank"><i class='bx bxl-github'></i></a>
                     <a href="#" class="social-link" title="Twitter" target="_blank"><i class='bx bxl-twitter'></i></a>
-                    <a href="#" class="social-link" title="WhatsApp" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+                    <a href="https://wa.me/256742304643" class="social-link" title="WhatsApp" target="_blank"><i class='bx bxl-whatsapp'></i></a>
                 </div>
             </div>
             <div class="hero-visual">
