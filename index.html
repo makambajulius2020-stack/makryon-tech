@@ -467,6 +467,16 @@
             animation: fadeInRight 1s ease-out;
         }
 
+        /* new image inside hero section */
+        .hero-visual .hero-img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            animation: fadeInRight 1s ease-out;
+            display: block;
+        }
+
         @keyframes fadeInRight {
             from { opacity: 0; transform: translateX(50px); }
             to { opacity: 1; transform: translateX(0); }
@@ -905,6 +915,7 @@
 
         .resume-grid {
             display: grid;
+            grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
         }
 
@@ -949,7 +960,7 @@
         /* Skills Grid */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 1rem;
         }
 
@@ -997,6 +1008,14 @@
             border: 1px solid rgba(0, 255, 136, 0.2);
             position: relative;
             overflow: hidden;
+        }
+
+        .about-image .about-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 20px;
         }
 
         .about-image::before {
@@ -1067,7 +1086,7 @@
             max-width: 1400px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
             position: relative;
         }
@@ -1253,7 +1272,6 @@
         }
 
         .partner-logo::before {
-            content: 'Partner';
             font-family: 'Orbitron', sans-serif;
             color: var(--primary);
             font-size: 1.2rem;
@@ -1951,6 +1969,35 @@
         }
 
         /* Responsive Design */
+        /* Desktop Navigation - Reduced Height */
+        @media (min-width: 769px) {
+            nav {
+                padding: 0.75rem 5%;
+            }
+            
+            nav.scrolled {
+                padding: 0.6rem 5%;
+            }
+            
+            .logg img {
+                height: 50px;
+                width: 50px;
+            }
+            
+            .nav-links {
+                gap: 1.5rem;
+            }
+            
+            .nav-links a {
+                font-size: 0.8rem;
+            }
+            
+            .cta-button {
+                padding: 0.5rem 1rem;
+                font-size: 0.8rem;
+            }
+        }
+
         @media (max-width: 1024px) {
             .hero-title {
                 font-size: 3rem;
@@ -1993,8 +2040,8 @@
             }
 
             .logg img {
-                height: 48px;
-                width: 48px;
+                height: 36px;
+                width: 36px;
             }
 
             .nav-links {
@@ -2076,8 +2123,8 @@
             }
 
             .logg img {
-                height: 40px;
-                width: 40px;
+                height: 32px;
+                width: 32px;
             }
 
             .hero-title {
@@ -2169,15 +2216,14 @@
                     </a>
                 </div>
                 <div class="social-links">
-                    <a href="https://github.com/makambajulius-stack" class="social-link" title="GitHub" target="_blank"><i class='bx bxl-github'></i></a>
+                    <a href="https://github.com/" class="social-link" title="GitHub" target="_blank"><i class='bx bxl-github'></i></a>
                     <a href="#" class="social-link" title="Twitter" target="_blank"><i class='bx bxl-twitter'></i></a>
                     <a href="https://wa.me/256742304643" class="social-link" title="WhatsApp" target="_blank"><i class='bx bxl-whatsapp'></i></a>
                 </div>
             </div>
             <div class="hero-visual">
-                <div class="tech-illustration">
-                    <div class="tech-icon">⚡</div>
-                </div>
+                <!-- right‑side image for the home page -->
+                <img src="images/imag.jpeg" alt="Hero Image" class="hero-img">
             </div>
         </div>
     </section>
@@ -2344,32 +2390,42 @@
         <div class="tab-content" id="testimonials">
             <div class="testimonial-grid">
                 <div class="testimonial-card">
-                    <p>"Makryon-Tech transformed our online presence with a secure, scalable platform. Their team's expertise in both development and cybersecurity is top-notch. They delivered ahead of schedule and exceeded our expectations."</p>
+                    <p>"Makryon-Tech delivered an exceptional web application for our business. The Springing Stars platform features real-time updates and a beautiful, responsive design. Their attention to detail and modern approach exceeded our expectations!"</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">JD</div>
+                        <div class="author-avatar">SS</div>
                         <div class="author-info">
-                            <h5>James Ochieng</h5>
-                            <span>CTO, FinTech Uganda</span>
+                            <h5>Sarah Nakato</h5>
+                            <span>CEO, Springing Stars</span>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-card">
-                    <p>"Working with Makryon-Tech on our healthcare system was a game changer. They understood compliance and security from day one. The system is robust, secure, and our patients love it!"</p>
+                    <p>"Working with Makryon-Tech on our business website was a fantastic experience. They created a professional, SEO-optimized platform that perfectly represents our brand. The mobile-first design has significantly improved our client engagement."</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">MN</div>
+                        <div class="author-avatar">OB</div>
                         <div class="author-info">
-                            <h5>Dr. Mary Nambi</h5>
-                            <span>HealthTech Lead</span>
+                            <h5>Okema Bosco</h5>
+                            <span>Director, Okemabosco</span>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-card">
-                    <p>"The team at Makryon-Tech didn't just write code; they partnered with us to build a secure, future-proof product. Their AI chatbot solution exceeded expectations and reduced our support tickets by 60%."</p>
+                    <p>"The construction services website Makryon-Tech built for us is outstanding. The project galleries and modern design perfectly showcase our work. Our client inquiries have increased by 45% since launch!"</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">SK</div>
+                        <div class="author-avatar">TH</div>
                         <div class="author-info">
-                            <h5>Samuel Kato</h5>
-                            <span>Founder, Kato Enterprises</span>
+                            <h5>Timothy Habasa</h5>
+                            <span>Owner, Tei-Ha Construction</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Makryon-Tech's inventory management system transformed our operations. The real-time tracking and automated alerts have eliminated stock issues. The reporting dashboard gives us insights we never had before. Highly recommended!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MK</div>
+                        <div class="author-info">
+                            <h5>Michael Kiiza</h5>
+                            <span>Operations Manager, Retail Solutions</span>
                         </div>
                     </div>
                 </div>
@@ -2380,21 +2436,24 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="about-container">
-            <div class="about-image"></div>
+            <div class="about-image">
+                <img src="images/image.jpeg" alt="About Image" class="about-img">
+            </div>
             <div class="about-content">
                 <div class="section-subtitle">About Us</div>
                 <h3>Innovation Meets Security</h3>
-                <p>Makryon-Tech is a team of Software Engineers and Cybersecurity specialists passionate about building secure, scalable, and innovative solutions. With expertise spanning full-stack development and data security, we bring a unique perspective to every project.</p>
-                <p>Our approach combines technical excellence with creative problem-solving. We believe in writing clean, maintainable code and implementing security best practices from the ground up.</p>
-                <p>Our journey in tech started with <b>JULIUS MAKAMBA</b> & <b>MARY MBABAZI</b> who had curiosity about how things work, which evolved into a career focused on creating robust applications and protecting digital assets.</p>
+                <p>Makryon-Tech is a leading technology solutions provider specializing in software development and cybersecurity. Founded by <b>JULIUS MAKAMBA</b> and <b>MARY MBABAZI</b>, we are a team of passionate Software Engineers and Cybersecurity specialists dedicated to building secure, scalable, and innovative digital solutions.</p>
+                <p>With expertise spanning full-stack development, cloud technologies, and data security, we bring a unique perspective to every project. Our approach combines technical excellence with creative problem-solving, ensuring that every solution we deliver is not only functional but also secure and future-proof.</p>
+                <p>We believe in writing clean, maintainable code and implementing security best practices from the ground up. From dynamic web applications to comprehensive business platforms and inventory management systems, we've helped businesses across various industries transform their digital presence and streamline their operations.</p>
+                <p>Our commitment to quality, security, and client satisfaction has earned us the trust of businesses throughout Uganda and beyond. We don't just write code—we partner with our clients to understand their challenges and deliver solutions that drive real business value.</p>
                 <div class="stats-grid">
                     <div class="stat-item">
                         <div class="stat-number">13+</div>
-                        <div class="stat-label">Projects</div>
+                        <div class="stat-label">Projects Delivered</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-number">100%</div>
-                        <div class="stat-label">Satisfaction</div>
+                        <div class="stat-label">Client Satisfaction</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-number">3+</div>
@@ -2412,72 +2471,72 @@
             <h2 class="section-title">Featured Projects</h2>
             <p class="section-description">A showcase of innovative solutions we've delivered for our clients</p>
         </div>
-        <div class="portfolio-grid">
-            <div class="portfolio-item" onclick="openModal('E-Commerce Platform', 'Full-stack e-commerce solution with real-time inventory management, secure payment processing, and advanced analytics dashboard. Implemented robust security measures including encryption and secure authentication.')">
+        <!-- TEMP_REPLACE_START --><div class="portfolio-grid">
+            <div class="portfolio-item" onclick="openModal('Springing Stars system', 'A dynamic and interactive system built with cutting-edge technologies to manage the school. Features include responsive design across all devices, real-time data updates, smooth animations, and an intuitive user interface that delivers exceptional user experience.')">
                 <div class="portfolio-image">
-                    🌐
+                    <iframe src="https://springing-star-a3v7.vercel.app" style="width: 100%; height: 100%; border: none; position: absolute; inset: 0;" title="Springing Stars Preview"></iframe>
                     <div class="portfolio-overlay">
-                        <a href="#" class="project-link" onclick="event.stopPropagation()"><i class='bx bx-link-external'></i></a>
+                        <a href="https://springing-star-a3v7.vercel.app" class="project-link" target="_blank" onclick="event.stopPropagation()"><i class='bx bx-link-external'></i></a>
                     </div>
                 </div>
                 <div class="portfolio-content">
-                    <h3 class="portfolio-title">E-Commerce Platform</h3>
-                    <p class="portfolio-description">Full-stack e-commerce solution with real-time inventory management and secure payment processing.</p>
+                    <h3 class="portfolio-title">Springing Stars</h3>
+                    <p class="portfolio-description">Dynamic web application with cutting-edge technology, real-time updates, and exceptional user experience.</p>
                     <div class="portfolio-tags">
-                        <span class="tag">React</span>
-                        <span class="tag">Node.js</span>
-                        <span class="tag">MongoDB</span>
+                        <span class="tag">Tailwind</span>
+                        <span class="tag">Next.js</span>
+                        <span class="tag">FastAPI</span>
                     </div>
                 </div>
             </div>
-            <div class="portfolio-item" onclick="openModal('Security Audit Tool', 'Automated security assessment tool that scans web applications for vulnerabilities, generates comprehensive reports, and provides remediation recommendations.')">
+            <div class="portfolio-item" onclick="openModal('Okemabosco Business Platform', 'A comprehensive business website designed to showcase services and engage customers. Built with modern web standards, featuring SEO optimization, fast loading times, mobile-first design, and integrated contact forms for seamless client communication.')">
                 <div class="portfolio-image">
-                    🔒
+                    <iframe src="https://okemabosco.com/" style="width: 100%; height: 100%; border: none; position: absolute; inset: 0;" title="Okemabosco Preview"></iframe>
                     <div class="portfolio-overlay">
-                        <a href="#" class="project-link" onclick="event.stopPropagation()"><i class='bx bx-link-external'></i></a>
+                        <a href="https://okemabosco.com/" class="project-link" target="_blank" onclick="event.stopPropagation()"><i class='bx bx-link-external'></i></a>
                     </div>
                 </div>
                 <div class="portfolio-content">
-                    <h3 class="portfolio-title">Security Audit Tool</h3>
-                    <p class="portfolio-description">Automated security assessment tool that scans applications for vulnerabilities.</p>
+                    <h3 class="portfolio-title">Okemabosco</h3>
+                    <p class="portfolio-description">Professional business platform with SEO optimization, mobile-first design, and seamless client engagement.</p>
                     <div class="portfolio-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">Django</span>
-                        <span class="tag">Security</span>
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
                     </div>
                 </div>
             </div>
-            <div class="portfolio-item" onclick="openModal('Healthcare Management System', 'Comprehensive patient management system with appointment scheduling, secure health records storage, and telemedicine capabilities with end-to-end encryption.')">
+            <div class="portfolio-item" onclick="openModal('Tei-Ha Construction Services', 'A full-featured construction company website showcasing projects, services, and expertise. Includes project galleries, service descriptions, client testimonials, contact forms, and a modern design that reflects professionalism and reliability in the construction industry.')">
                 <div class="portfolio-image">
-                    🏥
+                    <iframe src="https://tei-ha-construction-services-dgmf.vercel.app" style="width: 100%; height: 100%; border: none; position: absolute; inset: 0;" title="Tei-Ha Construction Preview"></iframe>
                     <div class="portfolio-overlay">
-                        <a href="#" class="project-link" onclick="event.stopPropagation()"><i class='bx bx-link-external'></i></a>
+                        <a href="https://tei-ha-construction-services-dgmf.vercel.app" class="project-link" target="_blank" onclick="event.stopPropagation()"><i class='bx bx-link-external'></i></a>
                     </div>
                 </div>
                 <div class="portfolio-content">
-                    <h3 class="portfolio-title">Healthcare System</h3>
-                    <p class="portfolio-description">Patient management system with secure health records and telemedicine.</p>
+                    <h3 class="portfolio-title">Tei-Ha Construction</h3>
+                    <p class="portfolio-description">Construction services platform featuring project galleries, testimonials, and professional design.</p>
                     <div class="portfolio-tags">
-                        <span class="tag">Vue.js</span>
-                        <span class="tag">Laravel</span>
-                        <span class="tag">MySQL</span>
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JS</span>
                     </div>
                 </div>
             </div>
-            <div class="portfolio-item" onclick="openModal('AI Chatbot Platform', 'Intelligent conversational AI system with natural language processing for customer support automation. Includes sentiment analysis and multi-language support.')">
+            <div class="portfolio-item" onclick="openModal('Inventory Management System', 'A powerful inventory management solution designed for businesses to track stock levels, manage products, and generate reports. Features real-time inventory tracking, automated alerts for low stock, comprehensive reporting dashboard, and multi-user access with role-based permissions.')">
                 <div class="portfolio-image">
-                    🤖
+                    <iframe src="https://inventory-mgt-orcin.vercel.app" style="width: 100%; height: 100%; border: none; position: absolute; inset: 0;" title="Inventory Management Preview"></iframe>
                     <div class="portfolio-overlay">
-                        <a href="#" class="project-link" onclick="event.stopPropagation()"><i class='bx bx-link-external'></i></a>
+                        <a href="#" class="project-link" target="_blank" onclick="event.stopPropagation()"><i class='bx bx-link-external'></i></a>
                     </div>
                 </div>
                 <div class="portfolio-content">
-                    <h3 class="portfolio-title">AI Chatbot Platform</h3>
-                    <p class="portfolio-description">Intelligent conversational AI system for customer support automation.</p>
+                    <h3 class="portfolio-title">Inventory Management</h3>
+                    <p class="portfolio-description">Powerful inventory solution with real-time tracking, automated alerts, and comprehensive reporting dashboard.</p>
                     <div class="portfolio-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">TensorFlow</span>
-                        <span class="tag">NLP</span>
+                        <span class="tag">Tailwind</span>
+                        <span class="tag">Next.js</span>
+                        <span class="tag">RestAPI</span>
                     </div>
                 </div>
             </div>
@@ -2494,10 +2553,10 @@
             </p>
         </div>
         <div class="partnerships-grid">
-            <div class="partner-logo"></div>
-            <div class="partner-logo"></div>
-            <div class="partner-logo"></div>
-            <div class="partner-logo"></div>
+            <div class="partner-logo">Deep Shift AI</div>
+            <div class="partner-logo">Jasphine Digitals Technologies</div>
+           <!-- <div class="partner-logo"></div>
+            <div class="partner-logo"></div>-->
         </div>
     </section>
 
@@ -2592,6 +2651,7 @@
                         <li><a href="#services">AI Solutions</a></li>
                         <li><a href="#services">Cloud Solutions</a></li>
                         <li><a href="#services">DevOps Engineering</a></li>
+                         <li><a href="#services">System analysis & design</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
@@ -2941,7 +3001,16 @@
 
         // Download Company Profile
         window.downloadCV = function() {
-            alert('Company profile download - In production, this would download a PDF file.');
+            // Option 1: If you have a PDF file, uncomment this and add your PDF to the root folder
+            // window.open('company-profile.pdf', '_blank');
+            
+            // Option 2: Scroll to contact section to request the profile
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+            
+            // Show a friendly message
+            setTimeout(() => {
+                alert('Please contact us to receive our detailed company profile and portfolio.');
+            }, 500);
         }
 
         // Chatbot Functions
